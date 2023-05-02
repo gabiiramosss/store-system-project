@@ -19,18 +19,27 @@ namespace store_system_project
             {
                 if (parcelas <= 6)
                 {
-                    Console.WriteLine($" o Valor da compra ficou {Valor * 0.95} parcelado em 6x.");
+                    Console.WriteLine(@$" 
+                    o Valor da compra ficou {Valor * 1.05} parcelado em 6x.
+                    Com o valor de cada parcela de {Valor * 1.05/parcelas}");
 
                 }
                 else if (parcelas <= 12 && parcelas >= 7)
                 {
-                    Console.WriteLine($" o valor da compra ficou {Valor * 0.92}");
+                    Console.WriteLine(@$"
+                     o valor da compra ficou {Valor * 1.08}
+                     Com o valor de cada parcela de {Valor * 1.08/parcelas}");
 
                 }
                 else if (parcelas = 0)
                 {
                     Console.WriteLine($"o valor da sua compra ficou{Valor} ");
 
+                }
+                else if (parcelas > 12)
+                {
+                    Console.WriteLine($"Nao e possivel parcelar nessa quantidade de vezes!");
+                    
                 }
             }
 
