@@ -46,5 +46,9 @@ do
             //desconto de 12%
             //exibir código de barras
             break;
+        
+        case '4':
+            Console.WriteLine($"Pagamento cancelado.");
+            break;
     }
 } while (menu() != '0');
