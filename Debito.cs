@@ -10,7 +10,7 @@ namespace payment_system
         public float Saldo = 1000;
 
 
-        public void Debitar()
+        public override void Pagar()
         {
             if (Valor <= Saldo)
             {
