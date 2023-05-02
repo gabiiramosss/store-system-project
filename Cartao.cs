@@ -13,6 +13,14 @@ namespace payment_system
 		public string Cvv;
 		
 		public abstract void Pagar();
-		public abstract string SalvarCartao();
+		public string SalvarCartao(string bandeira, string numeroCartao, string titular, string cvv) 
+		{
+			Bandeira = bandeira;
+			NumeroCartao = numeroCartao;
+			Titular = titular;
+			Cvv = cvv;
+			
+			return $"O cartão foi salvo com a bandeira {bandeira}, número de cartão {NumeroCartao} , titular {Titular} e CVV {Cvv}";
+		} 
 	}
 }
