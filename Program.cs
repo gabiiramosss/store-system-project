@@ -56,8 +56,9 @@ do
             break;
 
         case '3':
-            //desconto de 12%
-            //exibir código de barras
+            Boleto boleto = new Boleto();
+            boleto.Valor = valor;
+            boleto.Registrar();6
             break;
         
         case '4':

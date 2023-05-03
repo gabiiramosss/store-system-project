@@ -15,7 +15,7 @@ namespace payment_system
         public void Registrar()
         {
             
-            Console.WriteLine($" Código de Barras do pagamento de valor { Valor * 0.88f } é {codigoBarras.Next()}");
+            Console.WriteLine($" Código de Barras do pagamento de valor {(Valor * 0.88f):C} é {codigoBarras.Next()}.");
 
             
         }
