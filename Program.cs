@@ -1,14 +1,17 @@
 ﻿//Sistema de pagamentos
 using payment_system;
 
-static char menu()
+Pagamento p1 = new Pagamento();
+float valor = 0;
+
+char menu()
 {
     Console.WriteLine($"---------------------------------------------");
     Console.WriteLine($"¦           Sistema de Pagamentos           ¦");
     Console.WriteLine($"---------------------------------------------");
 
     Console.WriteLine($"Informe o valor da compra: ");
-    float valor = float.Parse(Console.ReadLine());
+    valor = float.Parse(Console.ReadLine());
 
     Console.WriteLine(@$"
     Qual a forma de pagamento?
@@ -24,20 +27,25 @@ static char menu()
 
 do
 {
+    Pagamento pagamento;
     switch (menu())
     {
         case '1':
             Console.WriteLine($"Deseja parcelar? Digite 's' ou 'n'.");
             char resposta = char.Parse(Console.ReadLine());
+            
+            int parcela = 0;
 
+            Credito credito = new Credito();
+            
             if (resposta == 's')
             {
-
+                Console.WriteLine($"Em quantas vezes?");
+                parcela = int.Parse(Console.ReadLine());
             }
-            else
-            {
-
-            }
+            credito.parcelas = parcela;
+            credito.Valor = valor;
+            credito.Pagar();
             break;
 
         case '2':
@@ -49,7 +57,7 @@ do
             break;
         
         case '4':
-            ;
+            p1.Cancelar();
             break;
     }
 } while (menu() != '0');

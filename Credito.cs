@@ -13,36 +13,29 @@ namespace payment_system
             if (Valor > Limite)
             {
                 Console.WriteLine($"Cartao recusado! O valor excede o limite.");
-
             }
             else
             {
-                if (parcelas <= 6)
+                if (parcelas == 0)
                 {
-                    Console.WriteLine(@$" 
-                    o Valor da compra ficou {Valor * 1.05} parcelado em 6x.
-                    Com o valor de cada parcela de {Valor * 1.05/parcelas}");
-
+                    Console.WriteLine($"O valor da compra ficou R${Valor* 1.05} com juros de 5%.");
                 }
-                else if (parcelas <= 12 && parcelas >= 7)
+                else if (parcelas <= 6)
                 {
-                    Console.WriteLine(@$"
-                     o valor da compra ficou {Valor * 1.08}
-                     Com o valor de cada parcela de {Valor * 1.08/parcelas}");
-
+                    Console.WriteLine($"O valor da compra ficou R${Valor * 1.05} com juros de 5%.");
+                    Console.WriteLine($"Com o valor de cada parcela de R${Valor * 1.05/parcelas}.");
                 }
-                else if (parcelas == 0)
+                else if (parcelas <= 12)
                 {
-                    Console.WriteLine($"o valor da sua compra ficou{Valor} ");
-
+                    Console.WriteLine(@$"O valor da compra ficou R${Valor * 1.08} com juros de 8%.");
+                    Console.WriteLine($"Com o valor de cada parcela de R${Valor * 1.08/parcelas}.");
                 }
                 else if (parcelas > 12)
                 {
-                    Console.WriteLine($"Nao e possivel parcelar nessa quantidade de vezes!");
-                    
+                    Console.WriteLine($"Não é possível parcelar nessa quantidade de vezes!");   
                 }
-            }
 
+            }
         }
     }
 }

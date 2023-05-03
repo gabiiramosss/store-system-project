@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\53297269804\\Desktop\\store-system-project\\payment-system.csproj": {}
+    "C:\\Users\\50579698890\\Desktop\\payment-system\\payment-system.csproj": {}
   },
   "projects": {
-    "C:\\Users\\53297269804\\Desktop\\store-system-project\\payment-system.csproj": {
+    "C:\\Users\\50579698890\\Desktop\\payment-system\\payment-system.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\53297269804\\Desktop\\store-system-project\\payment-system.csproj",
+        "projectUniqueName": "C:\\Users\\50579698890\\Desktop\\payment-system\\payment-system.csproj",
         "projectName": "payment-system",
-        "projectPath": "C:\\Users\\53297269804\\Desktop\\store-system-project\\payment-system.csproj",
-        "packagesPath": "C:\\Users\\53297269804\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\53297269804\\Desktop\\store-system-project\\obj\\",
+        "projectPath": "C:\\Users\\50579698890\\Desktop\\payment-system\\payment-system.csproj",
+        "packagesPath": "C:\\Users\\50579698890\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\50579698890\\Desktop\\payment-system\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\53297269804\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\50579698890\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
