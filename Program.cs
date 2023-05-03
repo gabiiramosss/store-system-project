@@ -9,9 +9,11 @@ char menu()
     Console.WriteLine($"---------------------------------------------");
     Console.WriteLine($"¦           Sistema de Pagamentos           ¦");
     Console.WriteLine($"---------------------------------------------");
-
+    Console.WriteLine();
+    
     Console.WriteLine($"Informe o valor da compra: ");
     valor = float.Parse(Console.ReadLine());
+    Console.WriteLine();
 
     Console.WriteLine(@$"
     Qual a forma de pagamento?
@@ -25,20 +27,29 @@ char menu()
     return char.Parse(Console.ReadLine());
 }
 
+char resposta = '0';
+
 do
 {
+    Console.WriteLine($"Clique em qualquer botão para continuar.");
+    Console.ReadKey();
+    Console.Clear();
+
     Pagamento pagamento;
-    switch (menu())
+    resposta = menu();
+
+    switch (resposta)
     {
         case '1':
+            Console.Clear();
             Console.WriteLine($"Deseja parcelar? Digite 's' ou 'n'.");
-            char resposta = char.Parse(Console.ReadLine());
+            char respostaP = char.Parse(Console.ReadLine());
             
             int parcela = 0;
 
             Credito credito = new Credito();
             
-            if (resposta == 's')
+            if (respostaP == 's')
             {
                 Console.WriteLine($"Em quantas vezes?");
                 parcela = int.Parse(Console.ReadLine());
@@ -50,19 +61,27 @@ do
             break;
 
         case '2':
+            Console.Clear();
             Debito debito = new Debito();
             debito.Valor = valor;
             debito.Pagar();
             break;
 
         case '3':
+            Console.Clear();
             Boleto boleto = new Boleto();
             boleto.Valor = valor;
-            boleto.Registrar();6
+            boleto.Registrar();
             break;
         
         case '4':
+            Console.Clear();
             p1.Cancelar();
             break;
+
+        default:
+            Console.Clear();
+            Console.WriteLine($"Opção inválida!");
+            break;
     }
-} while (menu() != '0');
+} while (resposta != '0');

@@ -18,17 +18,17 @@ namespace payment_system
             {
                 if (parcelas == 0)
                 {
-                    Console.WriteLine($"O valor da compra ficou R${Valor* 1.05} com juros de 5%.");
+                    Console.WriteLine($"O valor da compra ficou {(Valor* 1.05):C} com juros de 5%.");
                 }
                 else if (parcelas <= 6)
                 {
-                    Console.WriteLine($"O valor da compra ficou R${Valor * 1.05} com juros de 5%.");
-                    Console.WriteLine($"Com o valor de cada parcela de R${Valor * 1.05/parcelas}.");
+                    Console.WriteLine($"O valor da compra ficou {(Valor * 1.05):C} com juros de 5%.");
+                    Console.WriteLine($"Com o valor de cada parcela de {(Valor * 1.05/parcelas):C}.");
                 }
                 else if (parcelas <= 12)
                 {
-                    Console.WriteLine(@$"O valor da compra ficou R${Valor * 1.08} com juros de 8%.");
-                    Console.WriteLine($"Com o valor de cada parcela de R${Valor * 1.08/parcelas}.");
+                    Console.WriteLine(@$"O valor da compra ficou {(Valor * 1.08)} com juros de 8%.");
+                    Console.WriteLine($"Com o valor de cada parcela de {(Valor * 1.08/parcelas):C}.");
                 }
                 else if (parcelas > 12)
                 {
