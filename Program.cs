@@ -46,9 +46,13 @@ do
             credito.parcelas = parcela;
             credito.Valor = valor;
             credito.Pagar();
+            p1 = credito;
             break;
 
         case '2':
+            Debito debito = new Debito();
+            debito.Valor = valor;
+            debito.Pagar();
             break;
 
         case '3':
