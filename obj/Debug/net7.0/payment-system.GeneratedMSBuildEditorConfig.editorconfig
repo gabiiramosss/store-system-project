@@ -10,6 +10,7 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = payment_system
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 build_property.ProjectDir = c:\Users\53297269804\Desktop\store-system-project\
 =======
 build_property.ProjectDir = c:\Users\50579698890\Desktop\payment-system\
@@ -17,3 +18,6 @@ build_property.ProjectDir = c:\Users\50579698890\Desktop\payment-system\
 =======
 build_property.ProjectDir = c:\Users\50496884859\Desktop\store-system-project\
 >>>>>>> rubens
+=======
+build_property.ProjectDir = c:\Users\50579698890\Desktop\payment-system\
+>>>>>>> 108702cd896bed1a92fc2e47a20460de537fb61b

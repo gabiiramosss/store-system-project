@@ -1,4 +1,5 @@
 ﻿//Sistema de pagamentos
+using payment_system;
 
 static char menu()
 {
@@ -48,7 +49,7 @@ do
             break;
         
         case '4':
-            Console.WriteLine($"Pagamento cancelado.");
+            ;
             break;
     }
 } while (menu() != '0');
