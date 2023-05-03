@@ -1,4 +1,4 @@
-namespace store_system_project
+namespace payment_system
 {
     public class Credito : Cartao
     {
@@ -31,7 +31,7 @@ namespace store_system_project
                      Com o valor de cada parcela de {Valor * 1.08/parcelas}");
 
                 }
-                else if (parcelas = 0)
+                else if (parcelas == 0)
                 {
                     Console.WriteLine($"o valor da sua compra ficou{Valor} ");
 
