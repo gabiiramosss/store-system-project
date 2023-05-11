@@ -21,13 +21,31 @@ char menu()
     2 - Cartão de débito
     3 - Boleto
     4 - Cancelar operação
-
-    0 - Sair
+    5 - Sair
     ");
     return char.Parse(Console.ReadLine());
 }
 
 char resposta = '0';
+
+void CadastroCartão(Cartao cartao)
+{
+    Console.WriteLine($"Primeiramente, vamos cadastrar seu cartão!");
+    Console.Write($"Insira o titular: ");
+    string titular = Console.ReadLine();
+    Console.Write($"Insira a bandeira: ");
+    string bandeira = Console.ReadLine();
+    Console.Write($"Insira o número do cartão: ");
+    string numero = Console.ReadLine();
+    Console.Write($"Insira o CVV: ");
+    string cvv = Console.ReadLine();
+
+    Console.WriteLine();
+    Console.ForegroundColor = ConsoleColor.DarkCyan;
+    Console.WriteLine(cartao.SalvarCartao(bandeira, numero, titular, cvv));
+    Console.ResetColor(); 
+    Console.WriteLine(); 
+}
 
 do
 {
@@ -42,17 +60,22 @@ do
     {
         case '1':
             Console.Clear();
+
+            Credito credito = new Credito();
+            CadastroCartão(credito);
+
             Console.WriteLine($"Deseja parcelar? Digite 's' ou 'n'.");
             char respostaP = char.Parse(Console.ReadLine());
+            Console.WriteLine();
             
             int parcela = 0;
 
-            Credito credito = new Credito();
             
             if (respostaP == 's')
             {
                 Console.WriteLine($"Em quantas vezes?");
                 parcela = int.Parse(Console.ReadLine());
+                Console.WriteLine();
             }
             credito.parcelas = parcela;
             credito.Valor = valor;
@@ -63,6 +86,7 @@ do
         case '2':
             Console.Clear();
             Debito debito = new Debito();
+            CadastroCartão(debito);
             debito.Valor = valor;
             debito.Pagar();
             break;
@@ -76,12 +100,19 @@ do
         
         case '4':
             Console.Clear();
-            p1.Cancelar();
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine(p1.Cancelar());
+            Console.ResetColor();
+            break;
+
+        case '5':
             break;
 
         default:
             Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine($"Opção inválida!");
+            Console.ResetColor();
             break;
     }
-} while (resposta != '0');
+} while (resposta != '5');

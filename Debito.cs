@@ -14,11 +14,17 @@ namespace payment_system
         {
             if (Valor <= Saldo)
             {
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine($"Compra aprovada!");
+                Console.WriteLine();
+                Console.ResetColor();
             }
             else
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine($"Compra negada!");
+                Console.WriteLine();
+                Console.ResetColor();
             }
         }
     }
