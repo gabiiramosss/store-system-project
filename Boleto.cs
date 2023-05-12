@@ -15,7 +15,7 @@ namespace payment_system
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine($"O Código de Barras do pagamento de valor {(Valor * 0.88f):C} é '{codigoBarras.Next()}'.");
             Console.ForegroundColor = ConsoleColor.DarkYellow;
-            Console.WriteLine($"Preste atenção na validade! O prazo de vencimento deste código é {DateTime.Now.AddDays(3).ToString("MM/dd/yyyy")}!");
+            Console.WriteLine($"Preste atenção na validade! O prazo de vencimento deste código é {DateTime.Now.AddDays(3).ToString("dd/MM/yyyy")}!");
             Console.WriteLine();
             Console.ResetColor();
         }

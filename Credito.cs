@@ -37,7 +37,7 @@ namespace payment_system
                 else if (parcelas <= 12)
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
-                    Console.WriteLine(@$"O valor da compra ficou {(Valor * 1.08)} com juros de 8%.");
+                    Console.WriteLine(@$"O valor da compra ficou {(Valor * 1.08):C} com juros de 8%.");
                     Console.WriteLine($"Com o valor de cada parcela de {(Valor * 1.08/parcelas):C}.");
                     Console.WriteLine();
                     Console.ResetColor();

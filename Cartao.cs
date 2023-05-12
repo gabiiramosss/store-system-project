@@ -20,7 +20,7 @@ namespace payment_system
 			Titular = titular;
 			Cvv = cvv;
 		
-			return $"O cartão foi salvo com a bandeira {bandeira}, número de cartão {NumeroCartao} , titular {Titular} e CVV {Cvv}.";
+			return $"O cartão foi salvo com a bandeira {bandeira}, número de cartão {NumeroCartao}, titular {Titular} e CVV {Cvv}.";
 		} 
 	}
 }
